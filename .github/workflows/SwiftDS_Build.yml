@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      run: xcodebuild  -scheme SwiftDS -project SwiftDS.xcodeproj -configuration Release destination 'platform=iOS Simulator,name=iPad (10th generation),OS=16.1' clean build 
+      run: xcodebuild  -scheme SwiftDS -project SwiftDS.xcodeproj -configuration Release -destination 'platform=iOS Simulator,name=iPad (10th generation),OS=16.1' clean build 
     - name: Run tests
       run: swift test -v
